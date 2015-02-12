@@ -5,22 +5,25 @@
 		$('#project-carousel-container').slick({
 		  infinite: true,
 		  speed: 300,
-		  slidesToShow: 2,
-		  slidesToScroll: 2,
+		  
+		  slidesToScroll: 1,
 		  arrows: false,
 		  accessibility: false,
-          centerPadding: '1px',
+		  
+          centerMode: true,
+		  centerPadding: '60px',
+		  slidesToShow: 2,
           
 		  responsive: [
 		    {
-		      breakpoint: 992,
+		      breakpoint: 768,
 		      settings: {
 		        slidesToShow: 2,
 		        slidesToScroll: 2,
 		      }
 		    },
 		    {
-		      breakpoint: 768,
+		      breakpoint: 480,
 		      settings: {
 		        slidesToShow: 1,
 		        slidesToScroll: 1,
