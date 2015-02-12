@@ -10,6 +10,16 @@ function mrd2015_preprocess_page(&$vars, $hook) {
   
 }
 
+/**
+* Implements hook_preprocess_node().
+*/
+function mrd2015_preprocess_node(&$vars) {
+  if($vars['view_mode'] == 'carousel_item') {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__carousel_item';
+  }
+} 
+
+
 function mrd2015_preprocess_image(&$vars) {
   // Make ALL images fluid
   foreach (array('width', 'height') as $key) {

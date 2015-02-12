@@ -1,0 +1,4 @@
+name = Custom View Modes
+description = Module to add custom view mode into 'manage display' screen
+package = Jack's Custom Modules
+core = 7.x

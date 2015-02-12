@@ -26,15 +26,6 @@ regions[page_bottom]    = 'Page bottom'
 
 stylesheets[all][] = css/style.css
 
-
-; For information on choosing the desired method, please read the Drupal
-; Bootstrap sub-theme "how-to" documentation:
-; https://drupal.org/node/1978010
-
-; ;----------------------------------
-; ; METHOD 1: Bootstrap Source Files
-; ;----------------------------------
-; 
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
@@ -52,14 +43,8 @@ scripts[] = 'bootstrap/js/scrollspy.js'
 scripts[] = 'bootstrap/js/tab.js'
 scripts[] = 'bootstrap/js/transition.js'
 
-; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+; Disable BootstrapCDN
 settings[bootstrap_cdn] = ''
 
+scripts[] = js/project-carousel.js
 
-; ;-------------------------
-; ; METHOD 2: Bootstrap CDN
-; ;-------------------------
-;
-; Method 2 uses BootstrapCDN, the only thing you might need to provide here
-; is overrides to Bootstrap theme settings. Copy them here from the base theme
-; to override.

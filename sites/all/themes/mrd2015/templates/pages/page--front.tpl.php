@@ -55,6 +55,20 @@
 		$view = node_view($node, 'full');
 		print render($view); 
 	  ?>
+	  
+	  <div class="container">
+		  <div class="row">
+			  <div class="col-xs-12">
+			  <h1>projects</h1>
+			  </div>
+		  </div>
+	  </div>
+	  
+	  <div class="row">
+		  <div id="project-carousel-container" class="col-xs-12">
+			  <?php print views_embed_view('project_carousel','projects'); ?>
+		  </div>
+	  </div>
       
       <?php
       	//render about page
