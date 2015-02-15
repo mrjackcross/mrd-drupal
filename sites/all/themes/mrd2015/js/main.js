@@ -98,7 +98,14 @@
 		resizeTestimonialBanner();
 		//addDropShadows();
 		
-		$('#project-carousel-container').height( $('#project-carousel-container img').height() );
+		projectCarousel.one("load", function() {
+
+			$('#project-carousel-container').height( $('#project-carousel-container img').height() );
+			
+		}).each(function() {
+			if(this.complete) $(this).load();
+		});	
+		
 		
     });
     
