@@ -8,16 +8,14 @@ if ($view_mode == "teaser") {
 	 //////////Teaser///////////
 	//////////////////////// */ ?>
 
-   <div class="row banner-image">
-   	  <div class="col-sm-1">
-   	  </div>
+   <div class="container banner-image">
    	  
-	  <div class="col-sm-10">
-		  <?php print render($content['field_banner_image']); ?>
-      </div>
-      
-      <div class="col-sm-1">
-   	  </div>
+		  <div id="featured-project-banner">
+		  	
+			<?php print render($content['field_banner_image']); ?>
+		  	
+	      </div>
+	      
   </div>
   
   <div id="featured-project-details" class="container clearfix"<?php print $attributes; ?>>

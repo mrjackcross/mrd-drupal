@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+      <a class="logo navbar-btn pull-left" href="#home" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
@@ -56,17 +56,17 @@
 		print render($view); 
 	  ?>
 	  
+	  <? //render project carousel ?>
 	  <div class="container">
 		  <div class="row">
-			  <div class="col-xs-12">
+			  <div id="project-carousel-heading" class="col-xs-12">
 			  <h1>projects</h1>
 			  </div>
 		  </div>
 	  </div>
-	  
 	  <div class="row">
 		  <div id="project-carousel-container" class="col-xs-12">
-			  <?php print views_embed_view('project_carousel','projects'); ?>
+		  		<?php print views_embed_view('project_carousel','projects'); ?>
 		  </div>
 	  </div>
       
@@ -77,9 +77,27 @@
 		print render($view); 
 	  ?>
 
+	  <div class="row">
+		  <div id="testimonial-container" class="col-xs-12">
+		  		<?php print views_embed_view('testimonial','testimonial_block'); ?>
+		  </div>
+	  </div>
+	  
+      <?php
+      	//render contact page
+		$node = node_load(10);					
+		$view = node_view($node, 'full');
+		print render($view); 
+	  ?>
+	  
       
     </section>
 </div>
-<footer class="footer container-fluid">
+<footer class="footer container">
   <?php print render($page['footer']); ?>
+  
+  <a id="back-to-top" href="#home">back to top</a>
+  
+  <!-- <span class="pull-right" id="copyright">&copy; <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> 2015</span> -->
+  <span class="pull-right" id="copyright">&copy; MRD London 2015</span>
 </footer>

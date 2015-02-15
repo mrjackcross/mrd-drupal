@@ -46,5 +46,7 @@ scripts[] = 'bootstrap/js/transition.js'
 ; Disable BootstrapCDN
 settings[bootstrap_cdn] = ''
 
-scripts[] = js/project-carousel.js
+scripts[] = 'js/project-carousel.js'
+scripts[] = 'js/main.js'
+
 

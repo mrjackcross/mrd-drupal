@@ -4,10 +4,6 @@ function mrd2015_preprocess_page(&$vars, $hook) {
   if (isset($vars['node'])) {
     $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
   }
-  
-  //make navbar fluid
-  //$vars['navbar_classes_array'][1] = "container-fluid";
-  
 }
 
 /**

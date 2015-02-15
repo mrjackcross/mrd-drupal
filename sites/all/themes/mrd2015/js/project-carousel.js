@@ -7,12 +7,12 @@
 		  speed: 300,
 		  
 		  slidesToScroll: 1,
-		  arrows: false,
-		  accessibility: false,
-		  
+		  arrows: true,
+		  		  
           centerMode: true,
 		  centerPadding: '60px',
 		  slidesToShow: 2,
+		  
           
 		  responsive: [
 		    {
@@ -34,7 +34,7 @@
 		    // instead of a settings object
 		  ]
 		});
-
+		
 	});
-
+	
 })(jQuery);
