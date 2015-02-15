@@ -77,10 +77,8 @@
 		print render($view); 
 	  ?>
 
-	  <div class="row">
-		  <div id="testimonial-container" class="col-xs-12">
-		  		<?php print views_embed_view('testimonial','testimonial_block'); ?>
-		  </div>
+	  <div class="container">
+		  <?php print views_embed_view('testimonial','testimonial_block'); ?>
 	  </div>
 	  
       <?php

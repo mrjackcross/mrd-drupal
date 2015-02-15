@@ -46,7 +46,8 @@
 	
 		var dropShadowDiv = '<div class="banner-image-drop-shadow drop-shadow"></div>'
 		var featuredProjectBanner = $('#featured-project-banner img');
-		var projectCarousel = $('#project-carousel-container');
+		var projectCarousel = $('#project-carousel-container .project-carousel-item-wrapper:last-of-type img');
+		var testimonialImage = $('#testimonial-image');
 		
 		featuredProjectBanner.one("load", function() {
 
@@ -65,14 +66,28 @@
 
 			$('body').append( $(dropShadowDiv).css( {
 				'top' : projectCarousel.offset().top - 20, 
-				'left' : projectCarousel.offset().left, 
-				'width' :  projectCarousel.width(), 
+				'left' : $('#project-carousel-container').offset().left, 
+				'width' :  $('#project-carousel-container').width(), 
 				'height' : projectCarousel.height()
 			}));
 			
 		}).each(function() {
 			if(this.complete) $(this).load();
-		});				
+		});	
+		
+		 featuredProjectBanner.one("load", function() {
+
+			$('body').append( $(dropShadowDiv).css( {
+				'top' : testimonialImage.offset().top - 20, 
+				'left' : testimonialImage.offset().left, 
+				'width' :  testimonialImage.width(), 
+				'height' : testimonialImage.height()
+			}));
+			
+		}).each(function() {
+			if(this.complete) $(this).load();
+		});	
+					
 	}	
 	
 	
@@ -83,12 +98,17 @@
 		resizeTestimonialBanner();
 		//addDropShadows();
 		
+		$('#project-carousel-container').height( $('#project-carousel-container img').height() );
+		
     });
     
     function resizedw(){
     
     	resizeGoogleMap();
     	resizeTestimonialBanner();
+    	
+    	$('#project-carousel-container').height( $('#project-carousel-container img').height() );
+    	
     	
 	}
       
