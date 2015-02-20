@@ -6,7 +6,60 @@ img {
 .drop-shadow {
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
 	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
-	box-shadow: 0px 0px 20px 0px rgba(0,0,0,1);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+}
+
+.main-container {
+	padding-top: 140px;
+}
+
+//nav
+
+.navbar {
+	
+	top: 0;
+	margin-bottom: 0;
+	border: none;
+	
+	min-height: 0 !important;
+	padding-bottom: 15px;
+	
+	-webkit-transition:  .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+	
+	ul.menu {
+		margin-top: 30px;
+	}
+	
+	.navbar-btn {
+		margin: 0;
+	}
+
+	.navbar-container {
+		padding-top: 20px;
+		background: url('../../../../default/files/images/static/white-80.png');
+	}
+	img.nav-logo {
+		-webkit-transition:  .2s ease-in-out;
+		-moz-transition: .2s ease-in-out;
+		transition: .2s ease-in-out;
+	}
+}
+
+.top-nav-collapse {
+	img.nav-logo {
+		width: 130px;
+	}
+	
+	ul.menu {
+		margin-top: 5px !important;
+	}
+	
+	.navbar-container {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 }
 
 //drop shadow container
@@ -86,12 +139,16 @@ img {
 	font-size: 40px;
 }
 
+.slick-slide {
+	height: auto !important;
+}
+
 .project-carousel-item-wrapper {
 	position: relative;	
 }
 
 .project-carousel-item-name {
-	display: block;
+	display: inline-block;
 	color: white;
 	padding: 10px 20px;
 	background: @brand-primary;
@@ -156,7 +213,7 @@ img {
 	height: 300px;
 }
 
-//Standard Pages 
+//Standard Sections
 .img-col {
 	img {
 		margin-bottom: 20px;
@@ -169,11 +226,69 @@ img {
 @media(min-width: @screen-xs-max){
 	
 	.txt-col {
-		padding: 0 15% 0 0;
+		padding: 0 10% 0 0;
+		//width: 200px !important;
 	}
 	
 	.img-col {
 		padding: 0;	
+	}
+}
+
+//Project Detail
+
+#project-heading {
+	padding: 0;	
+}
+
+.project-heading-date {
+	color: @gray-light;
+	margin-left: 15px;
+}
+
+#project-image-carousel-container {
+	padding: 0;
+	background: @body-bg;
+	
+	.slick-slide, .slick-cloned {
+	opacity: 0.3;
+	
+	-webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+	}
+	
+	.slick-center {
+		opacity: 1;
+	}
+
+}
+
+.project-attribute {
+	margin: 0;
+}
+
+.project-attribute-label {
+	color: @gray-light;
+}
+
+#project-controls {
+	margin-top: 25px;
+}
+
+#all-projects-button {
+	margin-top: -26px;
+	.btn {
+		display: inline-block;
+	}
+}
+
+//Project Order Page
+.views-field-field-project-image {
+	width: 20%;
+	img {
+		width: auto !important;
+		margin: 0 !important;
 	}
 }
 

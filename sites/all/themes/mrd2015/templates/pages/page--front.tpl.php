@@ -1,9 +1,9 @@
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container-fluid">
+  <div class="navbar-container container">
     <div class="navbar-header">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="#home" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+      <a class="logo navbar-btn pull-left page-scroll" href="#home" title="<?php print t('Home'); ?>">
+        <img class="nav-logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
 
@@ -19,9 +19,18 @@
     <?php if (!empty($primary_nav)): ?>
       <div class="navbar-collapse collapse pull-right">
         <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
+      		<ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li>
+                    <a class="page-scroll" href="#About">about</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#Projects">projects</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#Contact">contact</a>
+                </li>
+            </ul>
         </nav>
       </div>
     <?php endif; ?>
@@ -57,7 +66,7 @@
 	  ?>
 	  
 	  <? //render project carousel ?>
-	  <div class="container">
+	  <div id="Projects" class="container">
 		  <div class="row">
 			  <div id="project-carousel-heading" class="col-xs-12">
 			  <h1>projects</h1>

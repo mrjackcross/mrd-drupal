@@ -97,15 +97,7 @@
 		resizeGoogleMap();
 		resizeTestimonialBanner();
 		//addDropShadows();
-		
-		projectCarousel.one("load", function() {
-
-			$('#project-carousel-container').height( $('#project-carousel-container img').height() );
 			
-		}).each(function() {
-			if(this.complete) $(this).load();
-		});	
-		
 		
     });
     
@@ -113,8 +105,6 @@
     
     	resizeGoogleMap();
     	resizeTestimonialBanner();
-    	
-    	$('#project-carousel-container').height( $('#project-carousel-container img').height() );
     	
     	
 	}
