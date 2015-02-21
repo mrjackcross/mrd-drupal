@@ -7,8 +7,8 @@ function mrd2015_preprocess_page(&$vars, $hook) {
   
   //full width fixed nav bar
   unset($vars['navbar_classes_array'][1]);
-  unset($vars['navbar_classes_array'][2]);
-  $vars['navbar_classes_array'][] = 'navbar-fixed-top';
+  //unset($vars['navbar_classes_array'][2]);
+  //$vars['navbar_classes_array'][] = 'navbar-fixed-top';
 }
 
 /**

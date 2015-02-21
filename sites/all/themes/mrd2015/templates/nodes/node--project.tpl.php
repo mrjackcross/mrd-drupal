@@ -5,7 +5,7 @@ if ($view_mode == "teaser") {
 	 //////////Teaser///////////
 	//////////////////////// */ ?>
 
-   <div class="container banner-image">
+   <div class="container banner-image hidden-xs">
    	  
 		  <div id="featured-project-banner">
 		  	
@@ -39,11 +39,18 @@ if ($view_mode == "teaser") {
 	//////////////////////// */ ?>
 	
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+ <div class="row">
+ 		<div class="col-xs-12" id="project-image-carousel-container">
+ 			<?php print render($content['field_project_image']); ?>
+	 	</div>
+ </div> 
  <div class="container">
-   <div class="row">
+ 
+    <div class="row">
 	  <div id="project-heading" class="col-xs-12">
 		  <?php print render($title_prefix); ?>
-		    <h1>
+		    <h1 class="banner-heading">
 		    <?php print render($content['field_heading']); ?>
 		    <?php 
 		    if (!empty($content['field_project_date'])) { ?>
@@ -56,13 +63,7 @@ if ($view_mode == "teaser") {
 		
       </div>
   </div>
- </div>
- <div class="row">
- 		<div class="col-xs-12" id="project-image-carousel-container">
- 			<?php print render($content['field_project_image']); ?>
-	 	</div>
- </div> 
- <div class="container">
+  
   <div class="row">
 	  <div class="col-sm-5 txt-col">		
 		  <?php print render($content['body']); ?>
@@ -85,44 +86,41 @@ if ($view_mode == "teaser") {
 	      <?php 
 	      } ?>
 		  
-		  
 	  </div>
 	  
 	  <div class="col-sm-7 img-col">
 	  
 	  
 	  </div>
-  </div>
-  <div id="project-controls" class="row">
-      <?php	
-	  $options = array('absolute' => TRUE);
-	  ?>
-	  <?php
-      $nid = $previous_project_node_id;
-	  $url = url('node/' . $nid, $options);
-	  ?>
-	  <a href="<?php print $url; ?>" class="btn btn-default" aria-label="Left Align">
-	  <span>Previous Project</span>
-	  </a>
-	  	  
-	  <?php
-      $nid = $next_project_node_id;
-	  $url = url('node/' . $nid, $options);
-	  ?>
-	  <a href="<?php print $url; ?>" class="btn btn-default pull-right" aria-label="Left Align">
-	  <span>Next Project</span>
-	  </a>
 	  
-	  <div id="all-projects-button" class="text-center">
-		  <a href="<?php global $base_url; print $base_url;?>#Projects" class="btn btn-default center-block" aria-label="Left Align">
+  </div>
+  
+	  <div id="project-controls" class="row">
+	      <?php	
+		  $options = array('absolute' => TRUE);
+		  ?>
+		  
+		  <?php
+	      $nid = $next_project_node_id;
+		  $url = url('node/' . $nid, $options);
+		  ?>
+		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
+		  <span>Next Project</span>
+		  </a>
+		  
+		  <?php
+	      $nid = $previous_project_node_id;
+		  $url = url('node/' . $nid, $options);
+		  ?>
+		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
+		  <span>Previous Project</span>
+		  </a>
+		  	   
+		  <a href="<?php global $base_url; print $base_url;?>#Projects" class="btn btn-default pull-left" aria-label="Left Align">
 		  <span>All projects</span>
 		  </a>	
-	  </div>	
+	 </div> 
 	  
-    </div>
-  
- </div>
-  
 </div>
 
 <?php } ?>

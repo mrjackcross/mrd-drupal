@@ -5,7 +5,7 @@
 
 
 
-<div class="row banner-image">
+<div id="testimonial" class="row banner-image">
 	<div class="col-sm-1">
 	</div>
 	

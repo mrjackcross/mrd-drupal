@@ -10,23 +10,23 @@
 		  arrows: true,
 		  		  
           centerMode: true,
-		  slidesToShow: 2,
+		  slidesToShow: 3,
 		  initialSlide: 1,
 		  
           
 		  responsive: [
-		    {
-		      breakpoint: 768,
+		  	{
+		      breakpoint: 1200,
 		      settings: {
 		        slidesToShow: 2,
 		        slidesToScroll: 1,
 		      }
 		    },
 		    {
-		      breakpoint: 480,
+		      breakpoint: 768,
 		      settings: {
 		        slidesToShow: 1,
-		        slidesToScroll: 1,
+		        slidesToScroll: 1
 		      }
 		    }
 		    // You can unslick at a given breakpoint now by adding:

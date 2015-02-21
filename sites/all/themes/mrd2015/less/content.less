@@ -10,56 +10,143 @@ img {
 }
 
 .main-container {
-	padding-top: 140px;
+	
 }
+
+.banner-heading {
+	background: url('../../../../default/files/images/static/brand-primary-80.png');
+	display: inline-block;
+	font-size: 32px;
+	color: #fff;
+	font-weight: 200;	
+	padding: 20px 30px;
+	margin-top: -96px !important;
+	margin-bottom: 45px !important;
+}
+
+@media(max-width: @screen-sm) {
+	.banner-heading {
+		background: none;
+		display: inline-block;
+		font-size: 32px;
+		color: @gray;
+		font-weight: 200;	
+		padding: 0;
+		margin-top: 20px !important;
+		margin-bottom: 15px !important;
+	}
+}
+
 
 //nav
-
-.navbar {
+.navbar-header {
 	
-	top: 0;
-	margin-bottom: 0;
-	border: none;
-	
-	min-height: 0 !important;
-	padding-bottom: 15px;
-	
-	-webkit-transition:  .2s ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    transition: .2s ease-in-out;
-	
-	ul.menu {
-		margin-top: 30px;
-	}
-	
-	.navbar-btn {
-		margin: 0;
-	}
-
-	.navbar-container {
-		padding-top: 20px;
-		background: url('../../../../default/files/images/static/white-80.png');
-	}
-	img.nav-logo {
-		-webkit-transition:  .2s ease-in-out;
-		-moz-transition: .2s ease-in-out;
-		transition: .2s ease-in-out;
+	a.logo {
+		max-width: 75%;
 	}
 }
 
-.top-nav-collapse {
-	img.nav-logo {
-		width: 130px;
+.navbar-toggle {
+	margin: 43px 0 0 0;	
+}
+
+@media(min-width: @screen-sm-min) {
+	.navbar {
+		
+	    background: transparent;
+	
+		
+		margin-bottom: 0;
+		border: none;
+		
+		min-height: 0 !important;
+		
+		ul.navbar-nav {
+			height: 108px;
+			li {
+				height: 88px;
+				
+				a {
+					height: 88px;
+					padding-top: 56px;
+					font-size: 16px;
+					color: @gray;
+				}
+			}		
+		}
+		
+		.navbar-btn {
+			margin: 0;
+		}
+	
+		.navbar-container {
+			height: 108px;
+			padding-right: 0;
+			
+		}
+		img.nav-logo {
+			margin-top: 20px;
+		}
 	}
 	
-	ul.menu {
-		margin-top: 5px !important;
-	}
+	.top-nav-collapse {
 	
-	.navbar-container {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		top: -40px;
+	
+	    
+		//background: url('../../../../default/files/images/static/white-80.png');
+		background: @body-bg;
+		
+		img.nav-logo {
+			margin-top: 10px;
+			width: 130px;
+		}
+		
+		ul.navbar-nav {
+			height: 40px;
+			
+			li {
+				height: 40px;
+				
+				a {
+					height: 40px;
+					padding-top: 16px;
+					font-size: 16px;
+				}
+			}
+		}
+		
+		.navbar-container {
+			height: 40px;
+		}
 	}
+
+}
+@media(max-width: @screen-sm) {
+/*
+	#navbar {
+		position: fixed;
+		top: 0;	
+	}
+*/
+	
+	.navbar-collapse {
+		width: 100%;
+		
+		ul.navbar-nav {
+			width: 100%;
+			
+			li {
+				width: 100%;
+				
+				a {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
+
 }
 
 //drop shadow container
@@ -96,7 +183,7 @@ img {
 }
 
 #featured-project-banner {
-	margin: 0 0 40px -12.5%;
+	margin: 0 0 20px -12.5%;
 	padding: 0;
 	width: 125%;
 }
@@ -112,6 +199,9 @@ img {
 }
 
 //Project Carousel
+.slick-slider {
+	margin-bottom: 0;	
+}
 
 #project-carousel-heading {
 	padding: 0;
@@ -177,7 +267,7 @@ img {
 	
 	position: relative;
 	
-	margin: 0 0 40px -12.5%;
+	margin: 0 0 0 -12.5%;
 	padding: 0;
 	width: 125%;
 }
@@ -219,20 +309,40 @@ img {
 		margin-bottom: 20px;
 	}
 	img:last-child {
-		margin-bottom: 40px;
+		margin-bottom: 0px;
 	}
 }
 
-@media(min-width: @screen-xs-max){
+#About, #Contact, #Projects, #testimonial{
+	padding-top: 40px;
+}
+
+
+.txt-col {
+	padding: 0 10% 0 0;
+	//width: 200px !important;
+}
+
+.img-col {
+	padding: 0;	
+}
+
+@media(max-width: @screen-sm-min) {
+
+.txt-col {
+	padding: 0 0 0 0;
+	margin-bottom: 20px;
+}
+
+.img-col {
+	padding: 0;	
 	
-	.txt-col {
-		padding: 0 10% 0 0;
-		//width: 200px !important;
+	img {
+		margin-bottom: 20px;
 	}
+}
 	
-	.img-col {
-		padding: 0;	
-	}
+	
 }
 
 //Project Detail
@@ -242,7 +352,7 @@ img {
 }
 
 .project-heading-date {
-	color: @gray-light;
+	color: @link-color;
 	margin-left: 15px;
 }
 
@@ -261,7 +371,14 @@ img {
 	.slick-center {
 		opacity: 1;
 	}
-
+	
+	@media(max-width: @screen-sm-min) {
+	
+		.slick-slide, .slick-cloned {
+			opacity: 1;
+		}
+	}
+	
 }
 
 .project-attribute {
@@ -274,6 +391,12 @@ img {
 
 #project-controls {
 	margin-top: 25px;
+	
+	a {
+		margin: 0 5px 5px 0;
+		width: 140px;
+		text-align: left;
+	}
 }
 
 #all-projects-button {
