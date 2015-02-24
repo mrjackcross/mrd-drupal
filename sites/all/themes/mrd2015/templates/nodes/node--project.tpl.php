@@ -5,9 +5,9 @@ if ($view_mode == "teaser") {
 	 //////////Teaser///////////
 	//////////////////////// */ ?>
 
-   <div class="container banner-image hidden-xs">
+   <div class="container banner-image">
    	  
-		  <div id="featured-project-banner">
+		  <div class="drop-shadow" id="featured-project-banner">
 		  	
 			<?php print render($content['field_banner_image']); ?>
 		  	
@@ -15,20 +15,31 @@ if ($view_mode == "teaser") {
 	      
   </div>
   
-  <div id="featured-project-details" class="container clearfix"<?php print $attributes; ?>>
-   
-	  <div class="row">
-		  <div class="col-sm-5 txt-col">		
-		  	  <h2><?php print 'featured project:'; ?></h2>
-		  	  <a href="<?php print $node_url; ?>"><h1><?php print render($content['field_heading']); ?></h1></a>
-			  <?php print render($content['body']); ?>
+   <div class="container">
+   	  
+		  <div class="row" id="featured-project-strap">
+		  	
+			<h1 class="banner-heading"><?php print render($content['field_featured_project_strapline']); ?></h1>
+		  	
+	      </div>
+	      
+  </div>
+  <div class="container" id="featured-project-details-wrapper">
+	  <div id="featured-project-details" class="well clearfix"<?php print $attributes; ?>>
+	   	
+		  <div class="row">
+			  <div class="col-sm-5 txt-col">		
+			  	  <h2><?php print 'featured project:'; ?></h2>
+			  	  <a href="<?php print $node_url; ?>"><h1><?php print render($content['field_heading']); ?></h1></a>
+				  <?php print render($content['body']); ?>
+			  </div>
+			  
+			  <div class="col-sm-7 img-col">
+			 	 <?php print render($content['field_project_detail_image']); ?>
+			  </div>
 		  </div>
-		  
-		  <div class="col-sm-7 img-col">
-		 	 <?php print render($content['field_project_detail_image']); ?>
-		  </div>
+	  
 	  </div>
-  
   </div>
 
 <?php } else { ?>
@@ -100,13 +111,6 @@ if ($view_mode == "teaser") {
 		  $options = array('absolute' => TRUE);
 		  ?>
 		  
-		  <?php
-	      $nid = $next_project_node_id;
-		  $url = url('node/' . $nid, $options);
-		  ?>
-		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
-		  <span>Next Project</span>
-		  </a>
 		  
 		  <?php
 	      $nid = $previous_project_node_id;
@@ -115,8 +119,16 @@ if ($view_mode == "teaser") {
 		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
 		  <span>Previous Project</span>
 		  </a>
+		  
+		  <?php
+	      $nid = $next_project_node_id;
+		  $url = url('node/' . $nid, $options);
+		  ?>
+		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
+		  <span>Next Project</span>
+		  </a>
 		  	   
-		  <a href="<?php global $base_url; print $base_url;?>#Projects" class="btn btn-default pull-left" aria-label="Left Align">
+		  <a href="<?php global $base_url; print $base_url;?>#Projects" class="btn btn-default pull-right" aria-label="Left Align">
 		  <span>All projects</span>
 		  </a>	
 	 </div> 

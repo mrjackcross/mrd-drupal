@@ -66,15 +66,26 @@
 	  ?>
 	  
 	  <? //render project carousel ?>
-	  <div id="Projects" class="container">
+	  <div id="Projects" class="scrollblock container">
 		  <div class="row">
 			  <div id="project-carousel-heading" class="col-xs-12">
-			  <h1>projects</h1>
+			  <h1>projects
+			  <?php if($is_admin) {	
+				  $options = array('absolute' => TRUE);
+				  $projectOrderUrl = url('node/12', $options);
+				  ?>
+				<a class="custom-edit-link" target="_blank" href="<?php print $projectOrderUrl; ?>">
+				(Change Project Order)
+				</a>
+			  <?php 
+			  } ?>
+			  </h1>
+			  
 			  </div>
 		  </div>
 	  </div>
 	  <div class="row">
-		  <div id="project-carousel-container" class="col-xs-12">
+		  <div id="project-carousel-container" class="drop-shadow col-xs-12">
 		  		<?php print views_embed_view('project_carousel','projects'); ?>
 		  </div>
 	  </div>
@@ -86,7 +97,7 @@
 		print render($view); 
 	  ?>
 
-	  <div class="container">
+	  <div class="container hidden-xs">
 		  <?php print views_embed_view('testimonial','testimonial_block'); ?>
 	  </div>
 	  
@@ -101,6 +112,7 @@
     </section>
 </div>
 <footer class="footer container">
+<div id="footer-hr"></div>
   <?php print render($page['footer']); ?>
   
   <a id="back-to-top" href="#home">back to top</a>

@@ -96,10 +96,25 @@
 		initGoogleMap();
 		resizeGoogleMap();
 		resizeTestimonialBanner();
-		//addDropShadows();
+		
+		var scrollorama = $.scrollorama({ blocks:'.scrollblock', enablePin:false });
+		
+		scrollorama.onBlockChange(function() {
+		    var scrollPos = $(document).scrollTop();	
+		    window.location.hash = scrollorama.settings.blocks.eq( scrollorama.blockIndex ).attr('id');
+		    $(document).scrollTop(scrollPos);
+		});
+
 			
 		
     });
+    
+    //Close menu on click
+    $(document).on('click','.navbar-collapse.in',function(e) {
+	    if( $(e.target).is('a') ) {
+	        $(this).collapse('hide');
+	    }
+	});
     
     function resizedw(){
     

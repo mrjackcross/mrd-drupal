@@ -9,12 +9,12 @@
 	<div class="col-sm-1">
 	</div>
 	
-		<div id="testimonial-image" class="col-xs-10" style="background-image: url('<?php print $imgUrl; ?>');">
+		<div id="testimonial-image" class="drop-shadow col-xs-10" style="background-image: url('<?php print $imgUrl; ?>');">
 		
 			<div class="col-sm-1">
 			</div>
 			
-			<div class="testimonial-text col-sm-8">
+			<div class="testimonial-text col-sm-3">
 				
 				<div class="testimonial-text-wrapper">
 					<p class="testimonial-text"><?php print render($content['field_testimonial_text']); ?></p>
@@ -23,7 +23,7 @@
 				
 			</div>
 			
-			<div class="col-sm-1">
+			<div class="col-sm-6">
 			</div>  
 		
 		</div>

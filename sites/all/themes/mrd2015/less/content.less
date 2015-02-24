@@ -1,5 +1,9 @@
 //global
-img {
+body {
+	-webkit-font-smoothing: antialiased;	
+}
+
+.main-container img {
 	width: 100%;
 }
 
@@ -18,7 +22,7 @@ img {
 	display: inline-block;
 	font-size: 32px;
 	color: #fff;
-	font-weight: 200;	
+	font-weight: 300;	
 	padding: 20px 30px;
 	margin-top: -96px !important;
 	margin-bottom: 45px !important;
@@ -30,7 +34,7 @@ img {
 		display: inline-block;
 		font-size: 32px;
 		color: @gray;
-		font-weight: 200;	
+		font-weight: 300;	
 		padding: 0;
 		margin-top: 20px !important;
 		margin-bottom: 15px !important;
@@ -47,7 +51,12 @@ img {
 }
 
 .navbar-toggle {
-	margin: 43px 0 0 0;	
+	margin: 26px 0 0 0;	
+	border-color: @brand-primary !important;
+	
+	.icon-bar {
+		background-color: @brand-primary !important;
+	}
 }
 
 @media(min-width: @screen-sm-min) {
@@ -85,6 +94,7 @@ img {
 			
 		}
 		img.nav-logo {
+			//width: 100% !important;
 			margin-top: 20px;
 		}
 	}
@@ -123,12 +133,29 @@ img {
 
 }
 @media(max-width: @screen-sm) {
-/*
+
 	#navbar {
 		position: fixed;
 		top: 0;	
+		width: 100% !important;
+		
+		padding-bottom: 10px;
+		
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+	
 	}
-*/
+	
+	.main-container {
+		padding-top: 100px !important;
+	}
+
+	
+	img.nav-logo {
+		width: 100% !important;
+		margin-bottom: 10px;
+	}
 	
 	.navbar-collapse {
 		width: 100%;
@@ -142,6 +169,12 @@ img {
 				a {
 					width: 100%;
 					text-align: center;
+					background: #E5E5E5;
+					margin-bottom: 1px;
+					&:hover {
+						background: @brand-primary !important;
+						color: white !important;
+					}
 				}
 			}
 		}
@@ -178,17 +211,40 @@ img {
 }
 
 //Featured Project
-.banner-image {
-	
+.node-featured-project {
+	.banner-heading {
+		margin-bottom: 20px !important;
+	}
 }
 
 #featured-project-banner {
-	margin: 0 0 20px -12.5%;
+	margin: 0 0 0px -12.5%;
 	padding: 0;
 	width: 125%;
 }
 
+@media(max-width: @screen-sm) {
+	
+	#featured-project-strap {
+		text-align: center;
+	}
+	
+	#featured-project-banner {
+	margin: 0 !important;
+	padding: 0;
+	width: 100%;
+}
+
+}
+
+#featured-project-details-wrapper {
+	padding: 0 20px;
+}
+
 #featured-project-details {
+	margin-bottom: 0;
+	padding-top: 35px;
+	
 	h1 {
 		margin: 0 0 15px 0 !important;
 	}
@@ -275,10 +331,11 @@ img {
 .testimonial-text {
 	height: 100%;
 	position: relative;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 .testimonial-text-wrapper {
-	width: 240px;
+	width: 100%;
 	color: white;
 	padding: 20px 20px;
 	background: @brand-primary;
@@ -303,6 +360,10 @@ img {
 	height: 300px;
 }
 
+#contact-links {
+	margin-top: 15px;
+}
+
 //Standard Sections
 .img-col {
 	img {
@@ -315,6 +376,10 @@ img {
 
 #About, #Contact, #Projects, #testimonial{
 	padding-top: 40px;
+	
+	@media(max-width: @screen-sm-min) {
+		padding-top: 100px;
+	}
 }
 
 
@@ -329,20 +394,33 @@ img {
 
 @media(max-width: @screen-sm-min) {
 
-.txt-col {
-	padding: 0 0 0 0;
-	margin-bottom: 20px;
-}
-
-.img-col {
-	padding: 0;	
-	
-	img {
+	.txt-col {
+		padding: 0 0 0 0;
 		margin-bottom: 20px;
 	}
+	
+	.img-col {
+		padding: 0;	
+		
+		img {
+			margin-bottom: 20px;
+		}
+	}
 }
+
+//Footer
+
+.footer {
+	border: none;	
+	padding: 0px 20px 20px;
 	
-	
+}
+
+#footer-hr {
+	min-height: 1px !important;
+	width: 100%;
+	border-top: 1px solid #E5E5E5; 
+	margin-bottom: 20px;
 }
 
 //Project Detail
@@ -360,6 +438,7 @@ img {
 	padding: 0;
 	background: @body-bg;
 	
+	
 	.slick-slide, .slick-cloned {
 	opacity: 0.3;
 	
@@ -372,17 +451,34 @@ img {
 		opacity: 1;
 	}
 	
+	img {
+		width: auto;
+		height: 90% !important;
+		min-height: 90%;
+		margin-right: 2px;
+	}
+	
 	@media(max-width: @screen-sm-min) {
 	
 		.slick-slide, .slick-cloned {
-			opacity: 1;
+			//opacity: 1;
 		}
+		
+	img {
+		//width: auto;
+		height: auto !important;
+		min-height: 0px !important;
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+	
 	}
 	
 }
 
-.project-attribute {
-	margin: 0;
+p.project-attribute {
+	margin: 15px 0;
+	
 }
 
 .project-attribute-label {
@@ -397,6 +493,13 @@ img {
 		width: 140px;
 		text-align: left;
 	}
+	
+	@media(max-width: @screen-sm-min) {
+	
+		.pull-right {
+			float: left !important;
+		}
+	}	
 }
 
 #all-projects-button {
@@ -407,7 +510,7 @@ img {
 }
 
 //Project Order Page
-.views-field-field-project-image {
+.views-field-field-project-carousel-image {
 	width: 20%;
 	img {
 		width: auto !important;
@@ -423,4 +526,8 @@ img {
 .banner-image-drop-shadow {
 	position: absolute;
 	z-index: -2001;
+}
+
+#navbar {
+	z-index: 999;	
 }

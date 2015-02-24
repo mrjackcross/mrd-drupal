@@ -2,7 +2,7 @@
   <div class="navbar-container container">
     <div class="navbar-header">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left page-scroll" href="#home" title="<?php print t('Home'); ?>">
+      <a class="logo navbar-btn pull-left page-scroll" href="/#home" title="<?php print t('Home'); ?>">
         <img class="nav-logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
@@ -61,6 +61,7 @@
     </section>
 </div>
 <footer class="footer container">
+<div id="footer-hr"></div>
   <?php print render($page['footer']); ?>
   
   <a id="back-to-top" href="#home">back to top</a>

@@ -10,17 +10,13 @@
 		  arrows: true,
 		  		  
           centerMode: true,
-		  slidesToShow: 1,
+		  //slidesToShow: 1,
+		  variableWidth: true,
           
 		  responsive: [
 		    {
 		      breakpoint: 768,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1,
-		        
-		        centerMode: false
-		      }
+		      settings: "unslick" 
 		    }
 		    // You can unslick at a given breakpoint now by adding:
 		    // settings: "unslick"
