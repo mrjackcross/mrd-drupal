@@ -22,13 +22,13 @@
       		<ul class="nav navbar-nav">
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                 <li>
-                    <a class="page-scroll" href="#Projects">projects</a>
+                    <a class="page-scroll" href="/#Projects">projects</a>
                 </li>                
                 <li>
-                    <a class="page-scroll" href="#About">about</a>
+                    <a class="page-scroll" href="/#About">about</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#Contact">contact</a>
+                    <a class="page-scroll" href="/#Contact">contact</a>
                 </li>
             </ul>
         </nav>

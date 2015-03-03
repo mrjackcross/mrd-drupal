@@ -90,13 +90,7 @@
 					
 	}	
 	
-	
-	$(document).ready(function(){
-
-		initGoogleMap();
-		resizeGoogleMap();
-		resizeTestimonialBanner();
-		
+	function scrollorama() {
 		var scrollorama = $.scrollorama({ blocks:'.scrollblock', enablePin:false });
 		
 		scrollorama.onBlockChange(function() {
@@ -104,6 +98,22 @@
 		    window.location.hash = scrollorama.settings.blocks.eq( scrollorama.blockIndex ).attr('id');
 		    $(document).scrollTop(scrollPos);
 		});
+	}
+	
+	$(document).ready(function(){
+
+		initGoogleMap();
+		resizeGoogleMap();
+		resizeTestimonialBanner();
+		scrollorama();
+		
+		$(".contextual-links-trigger").click(function() {
+			
+			history.pushState("", document.title, window.location.pathname);
+						
+		});
+		
+		
 
 			
 		

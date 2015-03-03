@@ -11,12 +11,21 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="<?php print base_path().drupal_get_path('theme', 'mrd2015'); ?>/css/ie/ieHacks.css"/> -->
+    <script src="<?php print base_path().drupal_get_path('theme', 'mrd2015'); ?>/js/respond.js"></script>
+    <script src="<?php print base_path().drupal_get_path('theme', 'mrd2015'); ?>/js/pie/PIE.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>   
   <![endif]-->
+  
+  <!--[if lt IE 8]>
+    <link href="<?php print base_path().drupal_get_path('theme', 'mrd2015'); ?>/css/ie/bootstrap-ie7.css" rel="stylesheet">
+  <![endif]-->
+
+
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <div id="drop-shadow-container" class="drop-shadow"></div>
+  <div id="drop-shadow-container" class="hidden-xs drop-shadow"></div>
   <div id="home"></div>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>

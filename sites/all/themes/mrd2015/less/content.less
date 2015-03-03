@@ -11,6 +11,14 @@ body {
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
 	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+	behavior: url(../js/pie/PIE.htc);
+}
+
+.paper-shadow {
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	behavior: url(../js/pie/PIE.htc);
 }
 
 .main-container {
@@ -24,7 +32,7 @@ body {
 	color: #fff;
 	font-weight: 300;	
 	padding: 20px 30px;
-	margin-top: -96px !important;
+	top: -96px !important;
 	margin-bottom: 45px !important;
 }
 
@@ -36,8 +44,17 @@ body {
 		color: @gray;
 		font-weight: 300;	
 		padding: 0;
+		top: auto !important;
 		margin-top: 20px !important;
 		margin-bottom: 15px !important;
+	}
+	
+	#featured-project-strap {
+		height: auto !importan;	
+	}
+	
+	#project-heading {
+		height: auto !important;	
 	}
 }
 
@@ -51,8 +68,14 @@ body {
 }
 
 .navbar-toggle {
-	margin: 26px 0 0 0;	
-	border-color: @brand-primary !important;
+	margin: 15px 0 0 0;	
+	padding: 0;
+	border-radius: 0;
+	border: none !important;
+	
+	&:hover, &:focus {
+		background-color: @body-bg !important;
+	}
 	
 	.icon-bar {
 		background-color: @brand-primary !important;
@@ -138,30 +161,36 @@ body {
 		position: fixed;
 		top: 0;	
 		width: 100% !important;
-		
-		padding-bottom: 10px;
-		
+		min-height: 0 !important;
+				
 		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
 		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
 		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
 	
 	}
 	
+	.navbar-btn {
+		margin: 15px 0 0;
+		padding: 0;
+	}
+	
 	.main-container {
-		padding-top: 100px !important;
+		padding-top: 60px !important;
 	}
 
 	
 	img.nav-logo {
-		width: 100% !important;
+		width: 50% !important;
 		margin-bottom: 10px;
 	}
 	
 	.navbar-collapse {
 		width: 100%;
+		max-height: none;
 		
 		ul.navbar-nav {
 			width: 100%;
+			margin-bottom: 10px;
 			
 			li {
 				width: 100%;
@@ -221,6 +250,11 @@ body {
 	margin: 0 0 0px -12.5%;
 	padding: 0;
 	width: 125%;
+}
+
+#featured-project-strap {
+	position: relative;
+	height: 0px;
 }
 
 @media(max-width: @screen-sm) {
@@ -317,7 +351,7 @@ body {
 
 
 #testimonial-image {
-	background-size:100%;
+	background-size: 105%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	
@@ -326,8 +360,9 @@ body {
 	margin: 0 0 0 -12.5%;
 	padding: 0;
 	width: 125%;
+	
 }
-
+	
 .testimonial-text {
 	height: 100%;
 	position: relative;
@@ -346,7 +381,7 @@ body {
 	left: 35px;
 	
 	p.testimonial-text {
-		font-size: 14px;	} 
+		font-size: 13px;	} 
 	
 	span.testimonial-source {
 		font-size: 10px;
@@ -378,7 +413,7 @@ body {
 	padding-top: 40px;
 	
 	@media(max-width: @screen-sm-min) {
-		padding-top: 100px;
+		padding-top: 30px;
 	}
 }
 
@@ -427,6 +462,7 @@ body {
 
 #project-heading {
 	padding: 0;	
+	height: 20px;
 }
 
 .project-heading-date {
@@ -437,8 +473,7 @@ body {
 #project-image-carousel-container {
 	padding: 0;
 	background: @body-bg;
-	
-	
+
 	.slick-slide, .slick-cloned {
 	opacity: 0.3;
 	
@@ -447,14 +482,19 @@ body {
     transition: opacity 0.3s ease-in-out;
 	}
 	
+	@media(min-width: @screen-lg) {
+		.slick-slide, .slick-cloned {
+			opacity: 1 !important;
+		}	
+	}
+	
+	
 	.slick-center {
 		opacity: 1;
 	}
 	
 	img {
 		width: auto;
-		height: 90% !important;
-		min-height: 90%;
 		margin-right: 2px;
 	}
 	
@@ -518,6 +558,21 @@ p.project-attribute {
 	}
 }
 
+//Brochure
+.brochure-page-wrapper {
+	padding: 0 !important;
+	margin-right: 5px;
+	
+	-webkit-box-shadow:1px 1px 4px rgba(0,0,0,.3);
+	box-shadow:1px 1px 4px rgba(0,0,0,.3);
+	
+}	
+
+#brochure-download-link {
+	font-size: 12px;	
+}
+
+
 //z indexes
 #drop-shadow-container {
 	z-index: -2000;
@@ -530,4 +585,19 @@ p.project-attribute {
 
 #navbar {
 	z-index: 999;	
+}
+
+#featured-project-banner {
+	position: relative;
+	z-index: 500;
+}
+
+.banner-heading {
+	position: relative;
+	z-index: 501;
+}
+
+#featured-project-details-wrapper {
+	position: relative;
+	z-index: 499;
 }
