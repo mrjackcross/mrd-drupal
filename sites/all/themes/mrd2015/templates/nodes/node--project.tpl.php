@@ -51,7 +51,7 @@ if ($view_mode == "teaser") {
 	
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
- <div class="row">
+ <div id="carousel-controls-wrapper" class="row">
  		<div class="col-xs-12" id="project-image-carousel-container">
  			<?php print render($content['field_project_image']); ?>
 	 	</div>
@@ -116,7 +116,7 @@ if ($view_mode == "teaser") {
 	      $nid = $previous_project_node_id;
 		  $url = url('node/' . $nid, $options);
 		  ?>
-		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
+		  <a href="<?php print $url; ?>" class="btn btn-default pull-left">
 		  <span>Previous Project</span>
 		  </a>
 		  
@@ -124,11 +124,11 @@ if ($view_mode == "teaser") {
 	      $nid = $next_project_node_id;
 		  $url = url('node/' . $nid, $options);
 		  ?>
-		  <a href="<?php print $url; ?>" class="btn btn-default pull-left" aria-label="Left Align">
+		  <a href="<?php print $url; ?>" class="btn btn-default pull-left">
 		  <span>Next Project</span>
 		  </a>
 		  	   
-		  <a href="<?php global $base_url; print $base_url;?>#Projects" class="btn btn-default pull-right" aria-label="Left Align">
+		  <a href="<?php global $base_url; print $base_url;?>#Projects" class="btn btn-default pull-right">
 		  <span>All projects</span>
 		  </a>	
 	 </div> 

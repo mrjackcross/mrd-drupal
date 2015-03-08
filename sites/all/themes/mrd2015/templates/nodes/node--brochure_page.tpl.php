@@ -17,7 +17,9 @@
   
 </div>
 
-<div  id="brochure-wrapper">
-<?php
-print render($content['field_brochure_page']); ?>
+<div id="carousel-controls-wrapper" class="row">
+	<div  id="brochure-wrapper">
+	<?php
+	print render($content['field_brochure_page']); ?>
+	</div>
 </div>

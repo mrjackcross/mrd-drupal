@@ -21,6 +21,15 @@
         <nav role="navigation">
       		<ul class="nav navbar-nav">
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                
+	              <?php if($is_admin) { ?>
+					<li>
+					<a class="custom-edit-link" href="/node/add">(add)</a>
+					</li>
+				  <?php 
+				  } ?>
+			  
+			  
                 <li>
                     <a class="page-scroll" href="#Projects">projects</a>
                 </li>                

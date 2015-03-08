@@ -21,9 +21,10 @@
 		  infinite: false,
 		  speed: 300,
 		  centerMode: false,
-		  slidesToShow: 2,
+		  slidesToShow: 1,
 		  slidesToScroll: 1,
 		  arrows: true,
+		  centerMode: true,
 		  responsive: [
 			    {
 			      breakpoint: 1200,

@@ -19,7 +19,7 @@
 		$('#project-image-carousel-container').slick({
 		  infinite: true,
 		  speed: 300,
-		  slidesToShow: 2,
+		  slidesToShow: 1,
 		  slidesToScroll: 1,
 		  arrows: true,
           centerMode: true,
