@@ -63,11 +63,13 @@ if ($view_mode == "teaser") {
 		  <?php print render($title_prefix); ?>
 		    <h1 class="banner-heading">
 		    <?php print render($content['field_heading']); ?>
+<!--
 		    <?php 
 		    if (!empty($content['field_project_date'])) { ?>
 		    	<span class="project-heading-date"><?php print render($content['field_project_date']);?></span>
 		    <?php
 		    } ?>
+-->
 		    
 		    </h1>
 		  <?php print render($title_suffix); ?>
@@ -81,7 +83,7 @@ if ($view_mode == "teaser") {
 		  
 		  <?php
 		  if (!empty($content['field_project_date'])) { ?>
-			  <p class="project-attribute"><span class="project-attribute-label">Budget - </span><?php print $node->field_project_date['und'][0]['value'];?></p>
+			  <p class="project-attribute"><span class="project-attribute-label">Date - </span><?php print $node->field_project_date['und'][0]['value'];?></p>
 		  <?php
 		  } ?>
 		  

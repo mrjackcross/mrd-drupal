@@ -68,8 +68,8 @@
       </div>
 
       <?php
-      	//render featured project
-		$node = node_load(5);					
+      	//render featured section
+		$node = node_load(22);					
 		$view = node_view($node, 'full');
 		print render($view); 
 	  ?>

@@ -27,7 +27,7 @@
 	function resizeTestimonialBanner() {
 	
 		//set testimonial height to featured project banner height
-		var featuredProjectBanner = $('#featured-project-banner img');
+		var featuredProjectBanner = $('#featured-section-banner img');
 		var testimonialBanner = $('#testimonial-image');
 		var testimonialText = $('.testimonial-text-wrapper'),
 			cw = testimonialText.width(),
@@ -73,7 +73,7 @@
 		console.log("appending...");
 		$(".slick-prev, .slick-next").appendTo($("#carousel-controls-wrapper"));
 
-			
+		$("#brochure-wrapper .slick-track").addClass("drop-shadow");	
 		
     });
     

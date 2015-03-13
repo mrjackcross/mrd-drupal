@@ -18,8 +18,11 @@
 			    foreach ($a_field_collection_item as $a_field_collection_item_object ) {
 			    	$link_title = $a_field_collection_item_object->field_link_title['und'][0]['value'];
 			    	$link_url = $a_field_collection_item_object->field_link_url['und'][0]['value'];
+			    	$external = $a_field_collection_item_object->field_external['und'][0]['value'];
 			    
-			    	print '<p><a target="_blank" href="' . $link_url . '">' . $link_title . '</a></p>';
+			    	print '<p><a href="' . $link_url . '" ';
+			    	$external == '1' ? print 'target="_blank">' : print 'target="_self">'; 
+			    	print $link_title . '</a></p>';
 			    }
 			
 			  } ?>

@@ -19,14 +19,12 @@
 		$('#project-carousel-container').slick({
 		  infinite: true,
 		  speed: 300,
-		  
+		  swipeToSlide: true,
 		  slidesToScroll: 1,
 		  arrows: true,
 		  		  
           centerMode: true,
-		  slidesToShow: 4,
-		  initialSlide: 1,
-		  
+		  slidesToShow: 4,		  
           
 		  responsive: [
 		  	{
