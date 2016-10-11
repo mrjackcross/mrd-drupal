@@ -20,18 +20,18 @@
 	        <nav role="navigation">
       		<ul class="nav navbar-nav">
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                
+
 	              <?php if($is_admin) { ?>
 					<li>
 					<a class="custom-edit-link" href="/node/add">(add)</a>
 					</li>
-				  <?php 
+				  <?php
 				  } ?>
-			  
-			  
+
+
                 <li>
                     <a class="page-scroll" href="/#Projects">projects</a>
-                </li>                
+                </li>
                 <li>
                     <a class="page-scroll" href="/#About">about</a>
                 </li>
@@ -47,11 +47,11 @@
 </header>
 
 <div class="container-fluid">
-    <section class="main-container row">    
+    <section class="main-container row">
       	<div class="container">
 	      <?php print render($title_prefix); ?>
 	      <?php print render($title_suffix); ?>
-	      
+
 	      <?php print $messages; ?>
 	      <?php if (!empty($tabs)): ?>
 	        <?php print render($tabs); ?>
@@ -63,17 +63,17 @@
 	        <ul class="action-links"><?php print render($action_links); ?></ul>
 	      <?php endif; ?>
       	</div>
-      	
+
 	    <?php print render($page['content']); ?>
-	      
+
     </section>
 </div>
 <footer class="footer container">
 <div id="footer-hr"></div>
   <?php print render($page['footer']); ?>
-  
+
   <a id="back-to-top" href="#home">back to top</a>
-  
+
   <!-- <span class="pull-right" id="copyright">&copy; <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> 2015</span> -->
-  <span class="pull-right" id="copyright">&copy; MRD London 2015</span>
+  <span class="pull-right" id="copyright">&copy; MRD London 2016</span>
 </footer>

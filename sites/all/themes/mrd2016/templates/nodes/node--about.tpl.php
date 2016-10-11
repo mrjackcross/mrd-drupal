@@ -1,17 +1,35 @@
-<div id="About" class="<?php print $classes; ?> scrollblock container clearfix"<?php print $attributes; ?>>
-    
+<div id="About" class="<?php print $classes; ?> scrollblock container"<?php print $attributes; ?>>
+
   <div class="row">
-	  <div class="col-sm-5 txt-col">		
-	  	  <?php print render($title_prefix); ?>
-		    <h1><?php print render($content['field_heading']); ?></h1>
-		  <?php print render($title_suffix); ?>
-		  
-		  <?php print render($content['body']); ?>
-	  </div>
-	  
-	  <div class="col-sm-7 img-col">
-	 	 <?php print render($content['field_small_image']); ?>
-	  </div>
+    <div class="col-xs-12 section-header-col">
+      <div class="banner-image">
+
+        <?php print render($content['field_banner_image']); ?>
+
+        <div class="banner-image-text">
+          <h1><?php print render($content['field_heading']); ?></h1>
+          <h2><?php print render($content['field_sub_heading']); ?></h2>
+        </div>
+
+      </div>
+    </div>
   </div>
-  
+
+  <div class="row">
+    <div class="col-xs-12 txt-col contextual-links-region">
+
+      <?php print render($title_suffix); ?>
+
+      <h3 class="section-intro"><?php print render($content['field_section_intro_block']); ?></h3>
+
+      <div class="about-body">
+        <?php print render($content['body']); ?>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="spacer">
+    <button class="spacer-dot"></button>
+  </div>
 </div>

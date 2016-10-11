@@ -29,7 +29,7 @@ stylesheets[all][] = css/style.css
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
-; 
+;
 scripts[] = 'bootstrap/js/affix.js'
 scripts[] = 'bootstrap/js/alert.js'
 scripts[] = 'bootstrap/js/button.js'
@@ -48,7 +48,10 @@ settings[bootstrap_cdn] = ''
 
 
 scripts[] = 'js/jquery.scrollorama.js'
-scripts[] = 'js/project-carousel.js'
+scripts[] = 'js/testimonial-carousel.js'
+scripts[] = 'js/projects-grid-carousel.js'
+scripts[] = 'js/projects-detail-grid-carousel.js'
+scripts[] = 'js/featured-section-carousel.js'
 scripts[] = 'js/project-image-carousel.js'
 scripts[] = 'js/brochure-carousel.js'
 scripts[] = 'js/jquery.easing.min.js'

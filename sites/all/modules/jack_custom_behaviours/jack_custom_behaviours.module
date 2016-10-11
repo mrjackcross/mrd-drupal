@@ -1,0 +1,15 @@
+<?php
+//Disable scrolling on Project grid ajax pager
+function jack_custom_behaviours_views_ajax_data_alter(&$commands, $view) {
+  if ($view->name == 'project_grid') {
+    foreach ($commands as $k=>$c) {
+      if ($c['command'] == 'viewsScrollTop') {
+        unset($commands[$k]);
+        break;
+      }
+    }
+  }
+}
+
+
+?>

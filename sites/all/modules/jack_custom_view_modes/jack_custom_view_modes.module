@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
 * Implements hook_entity_info_alter().
@@ -6,6 +6,11 @@
 function jack_custom_view_modes_entity_info_alter(&$entity_info) {
   $entity_info['node']['view modes']['carousel_item'] = array(
     'label' => t('Carousel Item'),
+    'custom settings' => TRUE,
+  );
+
+  $entity_info['node']['view modes']['grid_item'] = array(
+    'label' => t('Grid Item'),
     'custom settings' => TRUE,
   );
 }

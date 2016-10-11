@@ -1,0 +1,4 @@
+name = Custom Behaviours
+description = Module to enable custom behaviours
+package = Jack's Custom Modules
+core = 7.x

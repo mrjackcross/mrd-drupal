@@ -1,0 +1,13 @@
+<?php 
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function jack_contextual_node_node_view_alter(&$build) {
+  $node = $build['#node'];
+  if (!empty($node->nid)) {
+    $build['#contextual_links']['node'] = array('node', array($node->nid));
+  }
+}
+
+?>

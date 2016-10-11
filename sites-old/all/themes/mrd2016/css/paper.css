@@ -1,0 +1,100 @@
+.paper {
+  position: relative;
+  min-height: 20px;
+  padding: 19px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+.paper:after,
+.paper:before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+}
+.paper-curl-left:after,
+.paper-curl-left:before,
+.paper-curl-right:after,
+.paper-curl-right:before,
+.paper-curl:after,
+.paper-curl:before {
+  bottom: 12px;
+  width: 50%;
+  height: 55%;
+  max-width: 200px;
+  max-height: 100px;
+  -webkit-box-shadow: 0 8px 14px rgba(31, 31, 31, 0.5);
+  box-shadow: 0 8px 14px rgba(31, 31, 31, 0.5);
+}
+.paper-curl-left:before,
+.paper-curl-right:before,
+.paper-curl:before {
+  left: 6px;
+  -webkit-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.paper-curl-left:after,
+.paper-curl-right:after,
+.paper-curl:after {
+  right: 6px;
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.paper-curl-left {
+  border-radius: 0 0 0 Infinitypx 0 0 6px;
+}
+.paper-curl-right {
+  border-radius: 0 0 Infinitypx 0 6px 0;
+}
+.paper-curve-above:before,
+.paper-curve-below:before,
+.paper-curve-horiz:before,
+.paper-curve-left:before,
+.paper-curve-right:before,
+.paper-curve-vert:before,
+.paper-curve:before {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+.paper-curve-left:before,
+.paper-curve-right:before,
+.paper-curve-vert:before {
+  top: 10px;
+  bottom: 10px;
+  border-radius: 0.1px;
+}
+.paper-curve-left:before,
+.paper-curve-vert:before {
+  left: 0;
+  right: 50%;
+}
+.paper-curve-right:before {
+  left: 50%;
+  right: 0;
+}
+.paper-curve-vert:before {
+  right: 0;
+}
+.paper-curve-above:before,
+.paper-curve-below:before,
+.paper-curve-horiz:before {
+  left: 10px;
+  right: 10px;
+  border-radius: 10px;
+}
+.paper-curve-above:before {
+  top: 0;
+  bottom: 50%;
+}
+.paper-curve-below:before,
+.paper-curve-horiz:before {
+  top: 50%;
+  bottom: 0;
+}
+.paper-curve-horiz:before {
+  top: 0;
+}

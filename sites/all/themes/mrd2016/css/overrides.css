@@ -1,3 +1,7 @@
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
 }
@@ -66,19 +70,19 @@ body #admin-menu .dropdown li {
 .navbar.container {
   margin-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .navbar.container {
-    max-width: 720px;
+    max-width: 650px;
   }
 }
 @media screen and (min-width: 992px) {
   .navbar.container {
-    max-width: 940px;
+    max-width: 730px;
   }
 }
 @media screen and (min-width: 1200px) {
   .navbar.container {
-    max-width: 1140px;
+    max-width: 950px;
   }
 }
 .navbar.container > .container {
@@ -119,7 +123,7 @@ body #admin-menu .dropdown li {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .navbar .logo {
     margin-right: 0;
     padding-left: 0;
@@ -128,7 +132,7 @@ body #admin-menu .dropdown li {
 ul.secondary {
   float: left;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   ul.secondary {
     float: right;
   }
@@ -143,7 +147,7 @@ p:last-child {
   margin-bottom: 0;
 }
 .region-help > .glyphicon {
-  font-size: 18px;
+  font-size: 20px;
   float: left;
   margin: -0.05em 0.5em 0 0;
 }
@@ -166,7 +170,7 @@ form#search-block-form {
   margin-bottom: 0px;
 }
 ul.action-links {
-  margin: 12px 0;
+  margin: 20px 0;
   padding: 0;
 }
 ul.action-links li {
@@ -221,7 +225,7 @@ fieldset .panel-heading a.panel-title:hover {
 }
 .help-block,
 .control-group .help-inline {
-  color: #777777;
+  color: #cccccc;
   font-size: 12px;
   margin: 5px 0 10px;
   padding: 0;
@@ -253,12 +257,12 @@ table tr.error {
 .control-group.error textarea,
 .control-group.error select,
 .control-group.error .uneditable-input {
-  color: #555555;
-  border: 1px solid #cccccc;
+  color: #8c8c8c;
+  border: 1px solid #ccc;
 }
 .control-group.error .help-block,
 .control-group.error .help-inline {
-  color: #333333;
+  color: #000;
 }
 .list-inline > li.first {
   padding-left: 0;
@@ -303,7 +307,7 @@ ul li.leaf {
 .password-indicator div {
   height: 100%;
   width: 0%;
-  background-color: #999999;
+  background-color: #999;
 }
 input.password-confirm,
 input.password-field {
@@ -340,11 +344,11 @@ div.password-suggestions ul {
   float: left;
 }
 .form-autocomplete .glyphicon {
-  color: #777777;
+  color: #cccccc;
   font-size: 120%;
 }
 .form-autocomplete .glyphicon.glyphicon-spin {
-  color: #337ab7;
+  color: #006383;
 }
 .form-autocomplete .input-group-addon {
   background-color: #ffffff;
@@ -427,8 +431,8 @@ a .glyphicon-spin {
 .tabs-below > .nav-tabs .summary,
 .tabs-left > .nav-tabs .summary,
 .tabs-right > .nav-tabs .summary {
-  color: #777777;
-  font-size: 12px;
+  color: #cccccc;
+  font-size: 14px;
 }
 .tab-pane > .panel-heading {
   display: none;
@@ -437,7 +441,7 @@ a .glyphicon-spin {
   display: block;
 }
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .tabs-below > .nav-tabs > li {
   margin-top: -1px;
@@ -448,13 +452,13 @@ a .glyphicon-spin {
 }
 .tabs-below > .nav-tabs > li > a:hover,
 .tabs-below > .nav-tabs > li > a:focus {
-  border-top-color: #dddddd;
+  border-top-color: #ddd;
   border-bottom-color: transparent;
 }
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent #dddddd #dddddd #dddddd;
+  border-color: transparent #ddd #ddd #ddd;
 }
 .tabs-left > .nav-tabs,
 .tabs-right > .nav-tabs {
@@ -484,7 +488,7 @@ a .glyphicon-spin {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   overflow: hidden;
   padding: 10px 15px;
 }
@@ -497,12 +501,12 @@ a .glyphicon-spin {
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
-  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+  border-color: #eeeeee #ddd #eeeeee #eeeeee;
 }
 .tabs-left > .nav-tabs > .active > a,
 .tabs-left > .nav-tabs > .active > a:hover,
 .tabs-left > .nav-tabs > .active > a:focus {
-  border-color: #dddddd transparent #dddddd #dddddd;
+  border-color: #ddd transparent #ddd #ddd;
   -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -516,7 +520,7 @@ a .glyphicon-spin {
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
-  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+  border-color: #eeeeee #eeeeee #eeeeee #ddd;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -524,7 +528,7 @@ a .glyphicon-spin {
 .tabs-right > .nav-tabs > .active > a,
 .tabs-right > .nav-tabs > .active > a:hover,
 .tabs-right > .nav-tabs > .active > a:focus {
-  border-color: #dddddd #dddddd #dddddd transparent;
+  border-color: #ddd #ddd #ddd transparent;
 }
 th.checkbox,
 td.checkbox,
@@ -550,14 +554,14 @@ table .checkbox input[type="checkbox"] {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: right;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .form-horizontal .form-group label {
     float: left;
-    width: 16.666666666666664%;
+    width: 16.66666667%;
   }
 }
 .alert a {
@@ -574,4 +578,50 @@ table .checkbox input[type="checkbox"] {
 }
 .alert-danger a {
   color: #843534;
+}
+.row {
+  margin: 0;
+}
+.btn {
+  border: none !important;
+  border-radius: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.well {
+  border-radius: 0px;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+h1 {
+  margin: 0 0 25px 0 !important;
+}
+h2 {
+  color: #cccccc;
+  margin: 0 0 15px 0 !important;
+  font-weight: 200;
+}
+p {
+  margin: 0 0 15px 0;
+}
+p:last-child {
+  margin-bottom: 0px !important;
+}
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
+  color: #006383;
+}
+.nvabar.container {
+  margin: 0 !important;
+}
+.navbar-btn {
+  margin-bottom: 0 !important;
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    float: left !important;
+  }
 }

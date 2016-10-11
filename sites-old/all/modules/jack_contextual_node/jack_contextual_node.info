@@ -1,0 +1,4 @@
+name = Contextual Node
+description = Module to enable contextual links in full node view
+package = Jack's Custom Modules
+core = 7.x
